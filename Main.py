@@ -72,7 +72,7 @@ def upload_vid(bot, update):
     if(update.message.video.duration > 1800): #if the video is longer than 30 minutes. Cancle and report
         bot.sendMessage(update.message.chat_id, text="Video is too long. Maximum is 30 minutes")
         return
-    if (update.message.video.file_size > 268435456):
+    if (update.message.video.file_size > 256000000):
         bot.sendMessage(update.message.chat_id, text="Video is too big. Maximum is 256 MB")
         return
     try:
